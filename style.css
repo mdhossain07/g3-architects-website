@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap');
 
+
 /* Shared Styles  */
 
 *{
@@ -60,7 +61,7 @@ nav li{
     list-style: none;
 }
 
-nav a {
+nav li a {
     text-decoration: none;
     color:  #424242;
     text-align: center;
@@ -85,36 +86,147 @@ nav a {
     width: 100%;
 }
 
-/* Main Styles */
-
-main{
-    max-width: 1480px;
-    margin: 50px auto;
+.teams{
+    width: 80%;
+    margin: auto;
 }
 
-.team-section{
+.teams-container{
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.team-content{
-    padding: 0 30px;
-}
-
-.team-description{
-    width: 450px;
-}
-
-.team-images{
+.teams-images{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
+.teams-content{
+    margin-left: 40px;
+}
 
+.quick-list{
+    color: #727272;
+    font-size: 45px;
+    font-weight: 500;
+}
 
- /* Reponsive For Mobile */
+.features{
+    width: 80%;
+    margin: auto;
+}
+
+.features-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.features-content > .section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.features-container .card{
+    width: 586px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    padding: 30px;
+}
+
+.features-image > img{
+    margin-left: 50px;
+    width: 550px;
+    height: 700px;
+}
+
+.badge{
+    width: 280px;
+    height: 150px;
+    background-color: #FF900E;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 20px;
+    position: relative;
+    bottom: 50px;
+}
+
+.experience{
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.facts{
+    width: 80%;
+    margin: auto;
+}
+
+.facts-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.facts-container .facts-card{
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 25px;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.card-stats{
+    color: #424242;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.card-title{
+    color: #727272;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.sponsor{
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sponsor-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.sponsor-container > img{
+    width: 150px;
+    padding-right: 30px;
+}
+
+footer{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: #FFF4E7;
+    margin: 100px auto;
+    padding: 10px 0;
+}
+
+/* MObile Responsive */
 
 @media screen and (max-width: 576px) {
     header{
@@ -122,11 +234,14 @@ main{
     }
 
     nav,
-    .team-section{
+    .teams-container,
+    .features-container,
+    .facts-container,
+    .sponsor-container{
         flex-direction: column;
     }
 
-    nav a{
+    nav ul a{
         margin-right: 8px;
     }
 
@@ -134,12 +249,25 @@ main{
         width: 100%;
     }
 
-    .team-images{
+    .teams-images{
         grid-template-columns: 1fr;
     }
 
-    .team-content{
-        width: 80%;
+    .teams-content{
+        margin: 50px 0;
+    }
+
+    .features-container .card {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .features-image > img{
+        width: 90%;
+    }
+
+    .sponsor-container > img{
+        margin-bottom: 30px;
     }
 
 }
@@ -150,94 +278,39 @@ main{
     header{
         padding: 20px;
     }
+
     nav,
-    .team-section{
+    .teams-container,
+    .features-container,
+    .sponsor-container{
         flex-direction: column;
+    }
+
+    nav ul a{
+        margin-right: 8px;
     }
 
     .banner-content{
         width: 100%;
     }
 
-    .team-section{
-        margin: 20px 100px;
+    .teams-images img{
+        width: 100%
     }
 
-    /* .team-content{
-        padding: 0;
-        margin: 20;
-        width: auto;
-    } */
+    .teams-container{
+        margin-top: 50px;
+    }
 
+    .features-image > img{
+        width: 90%;
+    }
+
+    .facts-card{
+        margin-right: 15px;
+    }
+
+    .sponsor-container > img{
+        margin-bottom: 30px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
